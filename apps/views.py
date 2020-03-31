@@ -27,7 +27,7 @@ class AppViewSet(viewsets.ModelViewSet):
         else:
             raise APIException({'status': 'key_api is empty'})
 
-    @action(detail=False, methods=['GET'], url_path='filter_by_key_api')
+    @action(detail=False, methods=['GET'], url_path='test')
     def filter_by_key_api(self, request, *a, **kw):
         key_api = request.query_params.get('key_api')
         if key_api:

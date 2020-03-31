@@ -24,6 +24,9 @@ API:
 5. Обновления имени приложения:
     1) curl -X PUT -H "Content-Type: application/json" -H "Authorization: BearoiYWNjZXNzIiwier eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjZXhwIjoxNTg1NjU2OTg5LCJqdGkiOiI1YTY1YzdkOTU4MmU0ZDI0ODBlOGEzM2RjMWEyODhmMyIsInVzZXJfaWQiOjF9.aO7nSRRaIeLvQdmvRQvphTJFqgU-MQld0CtfKM2eb4U" -d '{"key_api": "Key APIAPI"}' http://localhost:8000/api/apps/1/update_key_api/
     PUT-запрос, указываем необходимые заголовки, токен авторизации, обновленные поля и id приложения в конце урла для обновления
+6. Получение информации по приложению с помощью key api:
+    1) curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg1NjYwNDg1LCJqdGkiOiI3YWY0Y2I0MDUzYjk0ZTYxOGQ2ZmMyNDYxZjg2Mzg2NSIsInVzZXJfaWQiOjF9.DX2xUfsbjP47PnX-rNDVH7zCB5960us05ppyTOAfZbY" http://localhost:8000/api/apps/test/?key_api=KeyAPI
+    GET-запрос, указываем необходимые заголовки, токен авторизации, и key_api для получения объекта приложения
 6. Удаление приложения:
     1) curl -X DELETE -H "Content-Type: application/json" -H "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTg1NjU2OTg5LCJqdGkiOiI1YTY1YzdkOTU4MmU0ZDI0ODBlOGEzM2RjMWEyODhmMyIsInVzZXJfaWQiOjF9.aO7nSRRaIeLvQdmvRQvphTJFqgU-MQld0CtfKM2eb4U" http://localhost:8000/api/apps/1/
     DELETE-запрос, указываем необходимые заголовки, токен авторизации, id приложения в конце урла для удаления
